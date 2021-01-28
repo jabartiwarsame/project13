@@ -4,7 +4,7 @@ Project 1: ELK Stack Project repository for Cybersecurity BootCamp coursework
 
 The files in this repository were used to configure the network depicted below.
 
-![Network Diagram](Images/network_diagram.png "Network Diagram")
+![Network Diagram](https://github.com/jabartiwarsame/project13/blob/main/diagram/network_diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `beats-playbook.yml` file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -66,7 +66,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker_ps](Images/docker_ps.png "docker_ps")
+![docker_ps](https://github.com/jabartiwarsame/project13/blob/main/diagram/docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -94,7 +94,7 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook using the command `ansible-playbook /etc/ansible/file/install-elk.yml`.  Then, using a web-browser, navigate to port 5601 on public IP of the Elk-Server (http://168.62.31.74:5601) to check that the installation worked as expected (i.e. Kibana is up and running). Kibana GUI should appear as below:
 
-![Kibana Main Page](Images/kibana_main.png "Kibana Main Page")
+![Kibana Main Page](https://github.com/jabartiwarsame/project13/blob/main/diagram/kibana_main.png)
 
 #### Install filebeat on the webservers
 - Copy the `beats-playbook.yml` playbook file and associated configuration files `filebeat.yml` and `metricbeat.yml` files to the Ansible container folder `_/etc/ansible/files_`
@@ -103,25 +103,25 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook using the command `ansible-playbook /etc/ansible/files/beats-playbook.yml`. A successful playbook execution is shown below:
 
-![Playbook Execution](Images/filebeat_playbook_run.png "Playbook Execution")
+![Playbook Execution](https://github.com/jabartiwarsame/project13/blob/main/ansible/filebeat.yml)
 
 The beats data will now be available for viewing on the Kibana page as follows:
 - `Filebeat` availalbe under **Add Log Data** --> **System Logs**
 - `Metricbeat` available under **Add Metric Data** --> **Docker Metrics**
 
-![Kibana Beats](Images/kibana_beats.png "Kibana Beats")
+![Kibana Beats](https://github.com/jabartiwarsame/project13/blob/main/ansible/beats-playbook.yml)
 
 Check for successful data receipt from `Filebeat` and then navigate to the dashboard.
 
-![Filebeat main page](Images/filebeat_main.png "Filebeat main page")
+![Filebeat main page](https://github.com/jabartiwarsame/project13/blob/main/diagram/filebeat_main.png)
 
-![Filebeat Dashboard](Images/filebeat_dashboard.png "Filebeat Dashboard")
+![Filebeat Dashboard](https://github.com/jabartiwarsame/project13/blob/main/diagram/filebeat_dashboard.png)
 
 Check for successful data receipt from `Metricbeat` and then navigate to the dashboard.
 
-![Metricbeat main page](Images/metricbeat_main.png "Metricbeat main page")
+![Metricbeat main page](https://github.com/jabartiwarsame/project13/blob/main/diagram/metricbeat_main.png)
 
-![Metricbeat Dashboard](Images/metricbeat_dashboard.png "Metricbeat Dashboard")
+![Metricbeat Dashboard](https://github.com/jabartiwarsame/project13/blob/main/diagram/metricbeat_dashboard.png)
 
 #### Configuring Web Servers
 The webservers are assumed to be available prior to installing and configuring Elasticseach.  If webservers are not already available, then the following steps can be utilized to deploy an instance of DVWA on the `[webservers]` e.g. DVWA-VMx (where x is VM1, VM2, etc..)
